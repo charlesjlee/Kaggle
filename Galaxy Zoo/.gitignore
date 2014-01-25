@@ -1,9 +1,0 @@
-*.Rhistory
-
-*.asv
-Data
-*.pyc
-/Data
-/
-Submissions
-Tests/__pycache__/
