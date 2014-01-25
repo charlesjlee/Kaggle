@@ -1,0 +1,96 @@
+ Current Ideas
+ -------------
+ o Translate research paper algorithm
+ o Find viable solution representation and cost function (inspiration from 2D case)
+ o Reduce 3D to 2D problem
+ o Represent as LP
+  
+ o divide into sections and apply LP on each
+ o TS^2 PACK currently obtains best solution for 3D-BPP
+  
+ Crainic and the Extreme Points(EP's) rule (2008)
+C-EPBFD composite heuristic
+see "An Efficient Meta-heuristic for Mult-dimensional multi-container packing" page 3 for summary
+ - this is fast
+ - best constructive heuristic available
+ 
+Paper reviews
+--------------
+Multiple Destination Bin Packing
+ - good so far
+ - too complex to implement
+ - considers rotations
+ - considers groups of the same box size
+ - may not have good performance
+ 
+A Biased Random-Key Genetic Algorithm for a 2D and 3D Bin Packing Problem
+JOSÉFERNANDOGONÇALVESANDMAURICIOG.C.RESENDE
+ - complex to implement
+ - but seems doable and can just change the fitness function
+ - implement this one first
+ 
+ An Efficient Meta-heuristic for Mult-dimensional multi-container packing
+  - not detailed enough to implememnt
+  - but fast and seems good
+ 
+RectangleBinPack
+ - good overview of heuristids for the 2D case
+ 
+A Greedy Adaptive Search Procedure for Multi-Dimensional Multi-Container Packing Problems
+ - seems good and fast 
+ - unclear if supports rotation
+ - may be difficult to implement
+
+Packing in two and three dimensions
+ - very comprehensive overview of literature
+ - very complex
+
+Three Dimensional Bin Packing Problem with Variable Bin Height
+ - vague description of a simple GA
+ 
+Recent Advances in Multi-Dimensional Packing Problems
+ - excellent survey of the current state-of-the-art
+ 
+Additional Papers
+----------------
+E. E. Bischo, F. Janetz, and M. S. W. Ratcli. Loading pallets with nonidentical items. European Journal of Operations Research, 84:681{692, 1995.
+ - assume the optimal solution can be found by filling the bin from the bottom upwards by stacking layers consisting of one or two blocks of a single type of box on top of an available surface
+ 
+ R. W. Haessler and F. B. Talbot. Load planning for shipments of low density
+products.European Journal of Operational Research, 44:289{299, 1990.
+ - rail shipment of orders
+
+S.Martello,D.Pisinger,D.Vigo,E.D.Boef,andJ.Korst.Algorithm864:General and robot-packable variants of the three-dimensional bin packing problem. ACM Transactions on Mathematical Software,33:7:17:12,2007
+ - exact method for 3D-BPP using two-level branch & bound
+ 
+S.P.Fekete and J. Schepers. A Combinatorial characterization of higher-dimensional orthogonal packing. Mathematics  of Operations Research,29:353368,2004.
+- define an implicit representation of the packing by means of Interval Graphs (IG's), the Packing Class (PC) representation. The authors consider the relative position of the boxes in a feasible packing and, from
+the projection of the items on each orthogonal axis, they define a graph describing the overlappings of the items in the container.
+
+A.Lodi, S.Martello, and D.Vigo. Heuristic algorithms for the three-dimensional bin packing problem. European J. of Operational Research,141:410-420,2002.
+- developed tabu search algorithm based on new constructive procedures for the 2/3D cases
+
+A.Lodi, S.Martello, and D.Vigo. TSpack: A unified tabu search code for multidimensional bin packing problems. Annals of Operations Research,131:203-213, 2004.
+- propose a unified tabu search code for general multi-dimensional bin packing problems
+
+T.G.Crainic, G.Perboli, andR .Tadei. TS^2 PACK: A two-level tabu search for the three-dimensional bin packing problem. European J. of Operational Research, 195:744-760,2009.
+- developed two-level tabu search algorithm, in which the first level aims to reduce the number of bins and the second optimizes the packing of the bins, using the representation proppsed by Fekete and Scheperse (2004) and Fekete et al. (2007).
+ - currently obtains best solution for 3D-BPP
+
+F.Parreño, R.Alvarez-Valdes, J.F.Oliveira, and J.M.Tamarit. A hybrid GRASP/VND algorithm for two- and three-dimensional bin packing. Annals of Operations Research,179:203-220,2010.
+ - good algorithm
+ 
+Crainic and the Extreme Points(EP's) rule
+C-EPBFD composite heuristic
+see "An Efficient Meta-heuristic for Mult-dimensional multi-container packing" page 3 for summary
+
+H.Dyckho, G.Scheithauer, and J.Terno. CuttingandPacking(C&P).InM.Dell'Amico,
+F.Maoli,andS.Martello,editors,AnnotatedBibliographiesinCombinatorialOptimization.
+JohnWiley&Sons,Chichester,1997.
+ - survey of cutting and packing problems
+ 
+E.E. Bischoff and M.D. Marriott. A comparative evaluation of heuristics for container loading. European Journal of Operational Research,44:267{276,1990.
+ - compare 14 different heuristics
+  
+K.Li and K.-H.Cheng. On three-dimensional packing. SIAMJournalonComputing,19:847{867,1990.
+ - heuristics with asympotic worst-case performance

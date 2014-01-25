@@ -1,0 +1,10 @@
+*.Rhistory
+
+*.asv
+Data
+/Data
+/
+Submissions
+/
+Code
+/__pycache__
