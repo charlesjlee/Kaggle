@@ -2,9 +2,8 @@
 
 *.asv
 Data
+*.pyc
 /Data
 /
 Submissions
-/
-Code
-/__pycache__
+Tests/__pycache__/
