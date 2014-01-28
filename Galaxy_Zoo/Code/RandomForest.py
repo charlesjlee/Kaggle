@@ -1,14 +1,23 @@
 #%% Setup environment
+from Metric import computeMetric
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+import os
 
-from sklearn.ensemble import RandomForestClassifier 
+#%% Load processed numpy file
+test = False
+if test:
+    os.chdir('..\\Data\\test')
+else:
+    os.chdir('..\\Data\\images_training_rev1')
+images = np.loadtxt("processed_images.txt")
 
-# Create the random forest object which will include all the parameters
-# for the fit
-Forest = RandomForestClassifier(n_estimators = 100)
-
-# Fit the training data to the training output and create the decision
-# trees
-Forest = Forest.fit(train_data[0::,1::],train_data[0::,0])
+#%% Train random forest
+rf = RandomForestClassifier(n_estimators=100, n_jobs=4)
+rf = rf.fit(train_data[0::,1::],train_data[0::,0])
 
 # Take the same decision trees and run on the test data
-Output = Forest.predict(test_data)
+pred = rf.predict(test_data)
+
+#%% Revert working directory
+os.chdir('C:\Projects\Kaggle\Galaxy_Zoo\Code')
